@@ -5,4 +5,8 @@ A collection of my practice work from different platforms as I learn data analyt
 ## Folders
 1. Kaggle
    - [Notebook Python](https://github.com/KeneilweG/Practice-Hub/blob/main/Kaggle/books-practice-25-aug-2025.ipynb)
-2. 
+   - [Retail Notebook](Kaggle/retailsales.ipynb)
+2. Snowflake
+   - 
+4. Databricks
+
