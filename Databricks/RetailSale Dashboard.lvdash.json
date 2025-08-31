@@ -1,0 +1,764 @@
+{
+  "datasets": [
+    {
+      "name": "5af1b376",
+      "displayName": "RetailSale",
+      "queryLines": [
+        "SELECT * FROM workspace.default.my_database;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "66aed15f",
+      "displayName": "Dashboard",
+      "layout": [
+        {
+          "widget": {
+            "name": "861e893e",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Retail Dashboard"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "159577cc",
+            "queries": [
+              {
+                "name": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_CUSTOMER_NAME",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "CUSTOMER_NAME",
+                      "expression": "`CUSTOMER_NAME`"
+                    },
+                    {
+                      "name": "CUSTOMER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "CUSTOMER_NAME",
+                    "displayName": "CUSTOMER_NAME",
+                    "queryName": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_CUSTOMER_NAME"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": false
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 1,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "7510fb85",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "PRODUCT_CATEGORY",
+                      "expression": "`PRODUCT_CATEGORY`"
+                    },
+                    {
+                      "name": "sum(TOTAL_REVENUE)",
+                      "expression": "SUM(`TOTAL_REVENUE`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "PRODUCT_CATEGORY",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Product Category"
+                },
+                "y": {
+                  "fieldName": "sum(TOTAL_REVENUE)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "none",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "axis": {
+                    "hideTitle": true,
+                    "hideLabels": true
+                  },
+                  "displayName": "Total Revenue"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "title": "Total Revenue by Product Category",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "35839854",
+            "queries": [
+              {
+                "name": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_PRODUCT_CATEGORY",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "PRODUCT_CATEGORY",
+                      "expression": "`PRODUCT_CATEGORY`"
+                    },
+                    {
+                      "name": "PRODUCT_CATEGORY_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "PRODUCT_CATEGORY",
+                    "displayName": "PRODUCT_CATEGORY",
+                    "queryName": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_PRODUCT_CATEGORY"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 2,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "79555010",
+            "queries": [
+              {
+                "name": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_MONTH_PERIOD",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "MONTH_PERIOD",
+                      "expression": "`MONTH_PERIOD`"
+                    },
+                    {
+                      "name": "MONTH_PERIOD_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "MONTH_PERIOD",
+                    "displayName": "MONTH_PERIOD",
+                    "queryName": "dashboards/01f0837919e6102192a5985f67e2bae0/datasets/01f0837a24601b8ab2e6885fcd87a3d9_MONTH_PERIOD"
+                  }
+                ]
+              },
+              "scale": {
+                "type": "categorical",
+                "sort": {
+                  "by": "custom-order",
+                  "orderedValues": [
+                    "Other",
+                    "Month Start"
+                  ]
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "showDescription": false
+              },
+              "disallowAll": false
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "38efba16",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "DAY_OF_WEEK",
+                      "expression": "`DAY_OF_WEEK`"
+                    },
+                    {
+                      "name": "sum(TOTAL_REVENUE)",
+                      "expression": "SUM(`TOTAL_REVENUE`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "DAY_OF_WEEK",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "axis": {
+                    "hideLabels": false,
+                    "hideTitle": true
+                  },
+                  "displayName": "DAY_OF_WEEK"
+                },
+                "y": {
+                  "fieldName": "sum(TOTAL_REVENUE)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "hideTitle": true,
+                    "hideLabels": true
+                  },
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "displayName": "Sum of TOTAL_REVENUE"
+                },
+                "label": {
+                  "show": true
+                }
+              },
+              "frame": {
+                "title": "Total revenue by day of week",
+                "showTitle": true
+              },
+              "mark": {
+                "colors": [
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 5,
+            "width": 3,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "ef079812",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "sum(ORDER_COUNT)",
+                      "expression": "SUM(`ORDER_COUNT`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(ORDER_COUNT)",
+                  "displayName": "Sum of ORDER_COUNT"
+                }
+              },
+              "frame": {
+                "title": "Total Orders",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 3,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "0e10ca1c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "sum(TOTAL_REVENUE)",
+                      "expression": "SUM(`TOTAL_REVENUE`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(TOTAL_REVENUE)",
+                  "displayName": "Sum of TOTAL_REVENUE"
+                }
+              },
+              "frame": {
+                "title": "Total Revenue",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 2,
+            "width": 1,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "25ca0020",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5af1b376",
+                  "fields": [
+                    {
+                      "name": "MONTH_PERIOD",
+                      "expression": "`MONTH_PERIOD`"
+                    },
+                    {
+                      "name": "CUSTOMER_NAME",
+                      "expression": "`CUSTOMER_NAME`"
+                    },
+                    {
+                      "name": "TOTAL_REVENUE",
+                      "expression": "`TOTAL_REVENUE`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "MONTH_PERIOD",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 2,
+                    "title": "MONTH_PERIOD",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "MONTH_PERIOD"
+                  },
+                  {
+                    "fieldName": "CUSTOMER_NAME",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 6,
+                    "title": "CUSTOMER_NAME",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "CUSTOMER_NAME"
+                  },
+                  {
+                    "fieldName": "TOTAL_REVENUE",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 7,
+                    "title": "TOTAL_REVENUE",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "displayName": "TOTAL_REVENUE"
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "DAY_OF_WEEK",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 0,
+                  "title": "DAY_OF_WEEK",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "MONTH_NAME",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 1,
+                  "title": "MONTH_NAME",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "ORDER_COUNT",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 3,
+                  "title": "ORDER_COUNT",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "QUANTITY",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 4,
+                  "title": "QUANTITY",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "PRODUCT_CATEGORY",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 5,
+                  "title": "PRODUCT_CATEGORY",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "title": "Table of sales data",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 4,
+            "width": 3,
+            "height": 5
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}
