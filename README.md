@@ -7,5 +7,5 @@ A collection of my practice work from different platforms as I learn data analyt
    - [Retail Notebook](Kaggle/retailsales.ipynb)
 2. Snowflake
    - [Processed Retail](Snowflake/processed.sql)
-4. Databricks
-
+3. Databricks
+   - [RetailSales Dashboard][Databricks/RetailSale Dashboard.lvdash.json]
