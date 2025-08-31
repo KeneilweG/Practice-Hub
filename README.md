@@ -8,4 +8,3 @@ A collection of my practice work from different platforms as I learn data analyt
 2. Snowflake
    - [Processed Retail](Snowflake/processed.sql)
 3. Databricks
-   - [RetailSales Dashboard](Databricks/RetailSale Dashboard.lvdash.json)
