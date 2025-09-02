@@ -8,4 +8,4 @@ A **collection** of my practice work from different platforms as I learn *data a
 2. Snowflake
    - [Processed Retail](Snowflake/processed.sql)
 3. Databricks
-   - [RetailSales Dashboard](Databricks/RetailSale Dashboard 2025-08-31 14_46.pdf)
+   - [RetailSales Dashboard]([Databricks/RetailSale Dashboard 2025-08-31 14_46.pdf](https://github.com/KeneilweG/Practice-Hub/blob/main/Databricks/RetailSale%20Dashboard%202025-08-31%2014_46.pdf)
